@@ -1,7 +1,28 @@
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-red-500">Test</h1>
+    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+      <img src="https://source.unsplash.com/random" alt="" className="w-full" />
+      ;
+      <div className="px-6 py-4">
+        <div className="font-bold text-purple-500 text-xl mb-2">
+          Photo by John Doe
+        </div>
+        <ul>
+          <li>
+            <strong>Views: 4000 </strong>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <strong>Downloads: 300 </strong>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <strong>Likes: 400 </strong>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
