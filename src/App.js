@@ -2,6 +2,7 @@
 // Imports
 import React, { useState, useEffect } from "react";
 import ImageCard from "./components/ImageCard";
+import ImageSearch from "./components/ImageSearch";
 
 // App Level Component
 function App() {
@@ -21,10 +22,11 @@ function App() {
         setIsLoading(false);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [term]);
 
   return (
     <div className="container mx-auto">
+      <ImageSearch searchText={(text) => setTerm(text)} />
       <div className="grid grid-cols-3 gap-4">
         {images.map((image) => (
           <ImageCard key={image.id} image={image} />
